@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <ul>
+    {% for page in pages %}
+        <li><a href="{{ path('page', { slug: page.slug }) }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
